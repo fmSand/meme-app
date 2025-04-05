@@ -1,3 +1,28 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+    <%= error.status || 500 %> - Error
+  </title>
+  <%- include('./partials/head.ejs') %>
+</head>
+
+<body>
+  <%- include('./partials/navbar.ejs') %>
+    <div class="container mt-5 text-center">
+      <img src="/images/the-office-no.png" alt="The Office No!" style="height: 250px;" class="img-fluid" />
+      <h1 class="display-4">Oops!</h1>
+      <p class="lead"><%= message %></p>
+      <h2 class="mb-0">Status: <%= error.status || 500 %></h2>
+      <% if (error.stack && process.env.NODE_ENV==='development' ) { %>
+        <hr>
+        <pre class="text-start bg-light p-3 rounded border"><%= error.stack %></pre>
+        <% } else { %>
+          <p class="text-muted">Something went wrong. Please try again later.</p>
+          <% } %>
+          <a href="/memes" class="btn btn-primary mt-3">Back to Memes</a>
+    </div>
+    <%- include('./partials/scripts.ejs') %>
+</body>
+</html>

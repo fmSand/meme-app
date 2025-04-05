@@ -1,0 +1,159 @@
+body {
+  color: #1a1a1a;
+  background-position: 50% 50%;
+  background-color: #1e1e1e;
+}
+
+/* --- HEADER --- */
+.header-section {
+  background: url('/images/memes.jpeg') center/cover no-repeat;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #f9f9f9;
+  padding: 4rem 2rem;
+}
+
+.header-section h1 {
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.header-section p {
+  color: #d0d0d0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+/* --- SEARCH FORM --- */
+.input-group .form-control:focus {
+  box-shadow: none;
+  border-color: #8bc53f;
+}
+
+form input.form-control {
+  border: 1px solid #ced4da;
+}
+
+form .btn-search {
+  background-color: #7eb835;
+  color: #fff;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0 6px 6px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form .btn-search:hover {
+  background-color: #8bc53f;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+form .btn-clear {
+  background-color: #ecf6f0;
+  color: #555;
+  font-weight: 500;
+  border-radius: 0 6px 6px 0;
+  padding: 0.5rem 1.25rem;
+}
+
+form .btn-clear:hover {
+  background-color: #e0e5e3;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+/* --- ALERTS / INFO --- */
+.alert-secondary {
+  background-color: #2d2d2d;
+  color: #e2e2e2;
+  border: 1px solid #444;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.alert-secondary::before {
+  content: '🔒';
+  margin-right: 4px;
+}
+
+.alert-secondary a {
+  color: #f1f3f5;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.alert-secondary a:hover {
+  text-decoration: none;
+}
+
+.alert .btn-close {
+  filter: invert(1);
+  opacity: 0.5;
+}
+
+/* --- TABLE --- */
+.table {
+  background-color: #1f1f1f;
+  color: #eaeaea;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.table thead th {
+  background-color: #2c2c2c;
+  color: #ccc;
+  font-weight: 600;
+  border-bottom: 2px solid #444;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #333;
+}
+
+.table td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+/* --- DETAILS BUTTON --- */
+.details-btn {
+  background-color: #75ad32;
+  color: #f1f1f1;
+  min-width: 78px;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+}
+
+.details-btn:hover {
+  background-color: #8bc53f;
+}
+
+/* --- VIEWED MEME --- */
+tr.viewed-meme {
+  background-color: #2a2a2a !important;
+  opacity: 0.85;
+}
+
+.btn.viewed-btn {
+  background-color: #3d3d3d;
+  border: 1px solid #555;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .header-section {
+    flex-direction: column;
+  }
+
+  .header-meme-img {
+    margin-top: 1rem;
+  }
+}

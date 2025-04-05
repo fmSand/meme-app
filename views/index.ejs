@@ -4,16 +4,22 @@
 <head>
   <title>Memes Central</title>
   <%- include('./partials/head.ejs') %>
+    <link href="/stylesheets/home.css" rel="stylesheet">
 </head>
 
 <body class="position-relative" data-bs-spy="scroll">
   <%- include('./partials/navbar.ejs') %>
-    <header id="home">
+    <header id="home" class="mt-5">
       <div class="container-fluid header-content">
         <div class="row">
           <div class="col">
             <div class="content-box text-center text-light">
-              <h1>Meme Central</h1>
+              <h1 class="display-2">Meme Central</h1>
+              <p class="lead mb-4">Discover, view, and enjoy classic memes</p>
+              <a href="/memes" class="btn btn-primary btn-lg ">Browse Memes</a>
+              <% if (!isAuthenticated) { %>
+                <a href="/auth/login" class="btn btn-light ms-2">Sign In</a>
+                <% } %>
             </div>
           </div>
         </div>
@@ -21,5 +27,4 @@
     </header>
     <%- include('./partials/scripts.ejs') %>
 </body>
-
 </html>

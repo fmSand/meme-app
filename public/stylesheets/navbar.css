@@ -1,3 +1,46 @@
-section {
-    padding-top: 50px;
+.navbar {
+  background-color: #f9f9f9 !important;
+}
+
+.navbar-brand img {
+  max-height: 36px;
+}
+
+.navbar-nav .nav-link {
+  color: #4a3a3a;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.navbar-nav .nav-link:not(.user-status):hover,
+.navbar-nav .nav-link:not(.user-status):focus {
+  color: #5d4c5d;
+  background-color: rgba(161, 230, 77, 0.15);
+  transition: background-color 0.3s;
+}
+
+.navbar .nav-link.active {
+  color: #4a3a3a;
+  text-decoration: underline;
+}
+
+.user-status {
+  color: #a1e64d !important;
+  margin-left: 10px;
+}
+
+.user-status:hover {
+  cursor: default;
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    padding: 15px;
+    border-radius: 0 0 8px 8px;
+    margin-top: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 15px;
+  }
 }
