@@ -13,6 +13,8 @@ A web application that displays and manage a collection of memes fetched from an
 - Backend search functionality filters memes by name.
 - Navbar includes logo, user status/name, and login/logout buttons.
 
+![](public/images/meme-readme-4.jpg)
+
 ## Technologies Used
 
 - **Backend:** Node.js
@@ -25,6 +27,8 @@ A web application that displays and manage a collection of memes fetched from an
 - **JavaScript Library:** jQuery (for DOM manipulation and AJAX requests)
 - **Data:** `users.json` file for demo users
 - **Environment Config**: Dotenv (load environment variables from `.env``)
+
+![](public/images/meme-readme-5.jpg)
 
 ## Installation & Setup
 
@@ -93,8 +97,8 @@ project-root/
 ├── public/
 │   ├── images/
 │   ├── js/
-│   │   ├── custom.js
-│   │   └── meme.js
+│   │   └── custom.js
+│   │  
 │   └── stylesheets/
 │       ├── auth.css
 │       ├── home.css
@@ -129,6 +133,8 @@ project-root/
 ```
 
 </details>
+
+![](public/images/meme-readme-3.jpg)
 
 ## Notes
 

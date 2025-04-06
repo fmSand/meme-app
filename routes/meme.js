@@ -11,7 +11,7 @@ const { ensureAuthenticated } = require('../middleware/auth');
  */
 router.post('/track-viewed-meme', ensureAuthenticated, (req, res, next) => {
   try {
-    const memeData = req.body; // From client (/js/meme.js)
+    const memeData = req.body; 
     const memeId = parseInt(memeData.id, 10);
 
     const viewedMemes = req.session.viewedMemes || {};

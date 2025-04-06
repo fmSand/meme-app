@@ -23,7 +23,7 @@ router.get('/', (req, res, next) => {
       );
     }
 
-    // Add thumbnail width (20% of original width)
+    // Add thumbnail size (20% of original width)
     filteredMemes = filteredMemes.map((meme) => ({
       ...meme,
       thumbWidth: Math.round(meme.width * 0.2),
