@@ -134,7 +134,6 @@ project-root/
 
 </details>
 
-![](public/images/meme-readme-3.jpg)
 
 ## Notes
 
@@ -143,7 +142,7 @@ project-root/
 - Viewed memes are tracked via session and persist across page reloads during the same session (until logout or server restart).
 - Passwords are stored in plain text for demo purposes (In a real application, they should be hashed using a library like bcrypt).
 
-![](public/images/meme-readme-2.jpg)
+![](public/images/meme-readme-2.jpg) ![](public/images/meme-readme-3.jpg)
 
 ## Credits
 
