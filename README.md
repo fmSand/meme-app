@@ -1,20 +1,148 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/R98JjKZL)
-﻿![](http://images.restapi.co.za/pvt/Noroff-64.png)
-# Noroff
-# Back-end Development Year 1
-### JavaScript Server - Course Assignment 1 <sup>V2</sup>
+# Meme Central
 
-Startup code for Noroff back-end development 1 - JavaScript Server course.
+A web application that displays and manage a collection of memes fetched from an external API. Built with Node.js, Express, and EJS, it allows users to discover, view, and track memes.
 
-Instruction for the course assignment is in the LMS (Moodle) system of Noroff.
-[https://lms.noroff.no](https://lms.noroff.no)
+## Features
 
-![](http://images.restapi.co.za/pvt/ca_important.png)
+- Fetches 20 random memes once on server startup.
+- Displays memes in a table on the Meme Overview page (`/memes`).
+- User login/logout functionality.
+- Guests can view the meme list but cannot see details.
+- Logged-in users can click "Details" to view more information about a specific meme (`/memes/:id`).
+- Viewed memes are highlighted per user session.
+- Backend search functionality filters memes by name.
+- Navbar includes logo, user status/name, and login/logout buttons.
 
-You will not be able to make any submission after the deadline of the course assignment. Make sure to make all your commit **BEFORE** the deadline
+## Technologies Used
 
-![](http://images.restapi.co.za/pvt/help.png)
+- **Backend:** Node.js
+- **Framework:** Express.js
+- **Template Engine:** EJS (Embedded JavaScript templates)
+- **Authentication:** Passport.js (using `passport-local` strategy)
+- **Session Management:** `express-session`
+- **API Calls:** Axios
+- **Frontend Styling:** Bootstrap 5, Bootstrap Icons, Google Fonts, custom CSS
+- **JavaScript Library:** jQuery (for DOM manipulation and AJAX requests)
+- **Data:** `users.json` file for demo users
+- **Environment Config**: Dotenv (load environment variables from `.env``)
 
-If you are unsure of any instructions for the course assignment, contact out to your teacher on **Microsoft Teams**.
+## Installation & Setup
 
-**REMEMBER** Your Moodle LMS submission must have your repository link **AND** your Github username in the text file.
+### Prerequisites
+
+Node.js (v14 or higher)
+npm (v6 or higher)
+
+### Steps
+
+1.  **Clone the repository:**
+    ```
+    git clone <repository-url>
+    cd <repository-directory>
+    ```
+2.  **Install dependencies:**
+    ```
+    npm install
+    ```
+3.  **Configuration:**
+
+    Create a `.env` file in the root with the following variables:
+
+    ```env
+    PORT=8000
+    MEME_API_URL=http://jss.restapi.co.za/memes
+    SESSION_SECRET="your_session_secret"
+    ```
+
+## Running the Application
+
+1.  **Start the server:**
+    ```
+    npm start
+    ```
+2.  **Access the application:**
+    Open your web browser and navigate to `http://localhost:3000` or the port specified in your `.env` file.
+
+## User Authentication
+
+The application includes three pre-configured demo users:
+
+| Username | Password |
+| -------- | -------- |
+| Josh     | Josh1    |
+| FJ       | FJ1      |
+| Student  | Student1 |
+
+## Project Structure
+
+<details>
+<summary> Full Project Structure</summary>
+
+```
+project-root/
+│
+├── bin/
+│   └── www
+│
+├── data/
+│   └── users.json
+│
+├── middleware/
+│   └── auth.js
+│
+├── public/
+│   ├── images/
+│   ├── js/
+│   │   ├── custom.js
+│   │   └── meme.js
+│   └── stylesheets/
+│       ├── auth.css
+│       ├── home.css
+│       ├── meme.css
+│       ├── memes.css
+│       ├── navbar.css
+│       └── style.css
+│
+├── routes/
+│   ├── auth.js
+│   ├── index.js
+│   ├── meme.js
+│   └── memes.js
+│
+├── views/
+│   ├── partials/
+│   │   ├── head.ejs
+│   │   ├── navbar.ejs
+│   │   └── scripts.ejs
+│   ├── error.ejs
+│   ├── index.ejs
+│   ├── login.ejs
+│   ├── meme.ejs
+│   ├── memes.ejs
+│   └── signup.ejs
+│
+├── app.js
+├── .env
+├── package.json
+└── README.md
+
+```
+
+</details>
+
+## Notes
+
+- Meme data is cached per server session (no re-fetching on navigation or reload)
+- Guests can view memes but must log in to view full details
+- Viewed memes are tracked via session and persist across page reloads during the same session (until logout or server restart).
+- Passwords are stored in plain text for demo purposes (In a real application, they should be hashed using a library like bcrypt).
+
+![](/images/meme-readme-2-jpg)
+
+![](.public/images/meme-readme-2-jpg)
+
+## Credits
+
+Developed as part of the JSS Course Assignment at Noroff.
+
+![](http://images.restapi.co.za/pvt/Noroff-64.png

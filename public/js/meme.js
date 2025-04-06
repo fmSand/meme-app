@@ -4,7 +4,7 @@
  */
 
 jQuery(() => {
-  $('.details-btn').on('click', function () {
+  $('.details-btn, .viewed-btn').on('click', function () {
     const memeData = $(this).data('meme');
 
     $.ajax({

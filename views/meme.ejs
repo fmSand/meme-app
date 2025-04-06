@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title><%= title %></title>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/stylesheets/meme.css" />
+  </head>
 
-<head>
-  <title>
-    <%= title %>
-  </title>
-  <%- include('./partials/head.ejs') %>
-    <link rel="stylesheet" href="/stylesheets/meme.css">
-</head>
-
-<body class="position-relative" data-bs-spy="scroll">
-  <%- include('./partials/navbar.ejs') %>
+  <body class="position-relative" data-bs-spy="scroll">
+    <%- include('./partials/navbar.ejs') %>
 
     <section class="container-fluid meme-container d-flex flex-column justify-content-center align-items-center vh-100">
       <div class="row w-100 align-items-center">
         <div class="col-md-3 d-flex justify-content-center mb-4 mb-md-0">
-          <img src="/images/will-smith-look.png" alt="Will Smith" class="img-fluid will-smith-img d-none d-md-block" />
+          <img src="/images/will-smith-look.png" alt="Will Smith" class="img-fluid will-smith-img d-none d-md-block"/>
         </div>
 
         <div class="col-md-10 col-lg-8">
-          <div class="card shadow meme-card p-4 mx-auto">
+          <div class="card shadow-lg meme-card p-5 mx-auto">
             <div class="row g-4 align-items-start">
               <div class="col-md-6 text-center">
-                <img src="<%= meme.url %>" class="img-fluid meme-img" alt="<%= meme.name %>">
+                <img src="<%= meme.url %>" class="img-fluid meme-img" alt="<%= meme.name %>"/>
               </div>
               <div class="col-md-6">
-                <h1 class="meme-title py-2">
-                  <%= meme.name %>
-                </h1>
+                <h1 class="meme-title py-2"><%= meme.name %></h1>
                 <ul class="list-unstyled mt-5">
                   <li><strong>ID:</strong>
                     <%= meme.id %>
@@ -35,13 +30,13 @@
                   <li><strong>Dimensions:</strong>
                     <%= meme.width %> x <%= meme.height %> px
                   </li>
-                  <li><strong>URL:</strong> <a href="<%= meme.url %>" target="_blank">
+                  <li><strong>URL:</strong><a href="<%= meme.url %>" target="_blank">
                       <%= meme.url %>
                     </a></li>
                 </ul>
                 <div class="mt-5">
-                  <a href="/memes" class="btn back-btn"><i class="bi bi-arrow-left"></i> Back to
-                    Memes</a>
+                  <a href="/memes" class="btn back-btn"
+                    ><i class="bi bi-arrow-left"></i> Back to Memes</a>
                 </div>
               </div>
             </div>
@@ -50,5 +45,5 @@
       </div>
     </section>
     <%- include('./partials/scripts.ejs') %>
-</body>
+  </body>
 </html>
