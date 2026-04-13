@@ -54,7 +54,7 @@ npm (v6 or higher)
 
     ```env
     PORT=8000
-    MEME_API_URL=http://jss.restapi.co.za/memes
+    MEME_API_URL=
     SESSION_SECRET="your_session_secret"
     ```
 
@@ -144,8 +144,5 @@ project-root/
 
 ![](public/images/meme-readme-2.jpg) ![](public/images/meme-readme-3.jpg)
 
-## Credits
+_Developed as part of a Javascript servers Course Assignment._
 
-Developed as part of the JSS Course Assignment at Noroff.
-
-![](http://images.restapi.co.za/pvt/Noroff-64.png)
