@@ -41,8 +41,8 @@ npm (v6 or higher)
 
 1.  **Clone the repository:**
     ```
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/fmSand/meme-app
+    cd meme-app
     ```
 2.  **Install dependencies:**
     ```
@@ -66,16 +66,6 @@ npm (v6 or higher)
     ```
 2.  **Access the application:**
     Open your web browser and navigate to `http://localhost:3000` or the port specified in your `.env` file.
-
-## User Authentication
-
-The application includes three pre-configured demo users:
-
-| Username | Password |
-| -------- | -------- |
-| Josh     | Josh1    |
-| FJ       | FJ1      |
-| Student  | Student1 |
 
 ## Project Structure
 
@@ -126,7 +116,6 @@ project-root/
 │   └── signup.ejs
 │
 ├── app.js
-├── .env
 ├── package.json
 └── README.md
 
@@ -144,5 +133,5 @@ project-root/
 
 ![](public/images/meme-readme-2.jpg) ![](public/images/meme-readme-3.jpg)
 
-_Developed as part of a Javascript servers Course Assignment._
+_Developed as part of a Javascript Servers - Course assignment._
 
