@@ -41,7 +41,7 @@ npm (v6 or higher)
 
 1.  **Clone the repository:**
     ```
-    git clone https://github.com/fmSand/meme-app
+    git clone https://github.com/fmSand/meme-app.git
     cd meme-app
     ```
 2.  **Install dependencies:**
